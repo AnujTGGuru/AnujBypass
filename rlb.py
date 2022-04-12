@@ -1,5 +1,5 @@
 import time
-import requests
+import cloudscraper
 from bs4 import BeautifulSoup 
 
 url = open('1.txt', 'r').read()
@@ -10,7 +10,7 @@ print("Checking Link!")
 # -----------------------------------
 
 def rocklinks_bypass(url):
-    client = requests.Session()
+    client = cloudscraper.create_scraper(allow_brotli=False)
     DOMAIN = "https://link.techyone.co"
     url = url[:-1] if url[-1] == '/' else url
 
@@ -20,7 +20,10 @@ def rocklinks_bypass(url):
     resp = client.get(final_url)
     
     soup = BeautifulSoup(resp.content, "html.parser")
-    inputs = soup.find(id="go-link").find_all(name="input")
+    try:
+        inputs = soup.find(id="go-link").find_all(name="input")
+    except:
+        return "Incorrect Link"
     data = { input.get('name'): input.get('value') for input in inputs }
 
     h = { "x-requested-with": "XMLHttpRequest" }
@@ -28,6 +31,10 @@ def rocklinks_bypass(url):
     time.sleep(6)
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
     return r.json()['url']
+
+# -----------------------------------
+
+print(rocklinks_bypass(url))
 
 # -----------------------------------
 
