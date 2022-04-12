@@ -41,10 +41,7 @@ def gplinks_bypass(url: str):
     }
     time.sleep(10)
     res = client.post(final_url, headers=h, data=data)
-    try:
-        return res.json()['url'].replace('\/','/')
-    except: return 'Something went wrong :(
-
+    return res.json()['url'].replace('\/','/')
 # ==============================================
 
 print(gplinks_bypass(url) ,file=open("2.txt", "w"))
