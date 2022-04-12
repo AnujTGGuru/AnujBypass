@@ -100,7 +100,7 @@ def rlb(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
         update.message.reply_text(f"processing")
-        os.system('python bypas.py')
+        os.system('python rlb.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"Done")
 
