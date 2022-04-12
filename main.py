@@ -1,8 +1,8 @@
 import telegram.ext
 import os
+from os import environ
 
-with open('token.txt', 'r') as f:
- TOKEN = f.read()
+TOKEN = environ.get('BOT_TOKEN')
 
 def start(update, context):
     update.message.reply_text("hello! swagat hai")
