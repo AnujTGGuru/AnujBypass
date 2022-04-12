@@ -30,7 +30,10 @@ def rocklinks_bypass(url):
     
     time.sleep(6)
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
-    return r.json()['url']
+    try:
+        return r.json()['url']
+    except: return "Something went wrong :("
 
+# ----------------------------------
 
 print(rocklinks_bypass(url) ,file=open('2.txt', 'w'))
