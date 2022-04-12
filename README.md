@@ -51,7 +51,7 @@ Intially I was not able to push a simple bot to heroku, but yeah googling a lot 
 - Fork this repo
 - Use the link below and deploy it
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/thanioruvangkls/gppass-telegram-bot)
 
 - Dont forget to enable worker in resources tab
 - Done
