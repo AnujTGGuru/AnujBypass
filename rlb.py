@@ -32,8 +32,5 @@ def rocklinks_bypass(url):
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
     return r.json()['url']
 
-# -----------------------------------
 
-print(rocklinks_bypass(url) ,file=open("2.txt", "w"))
-print("Confirming Link...")
-print("Successfully Bypassed!")
+print(rocklinks_bypass(url) ,file=open('2.txt', 'w'))
