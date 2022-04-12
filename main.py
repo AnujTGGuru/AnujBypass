@@ -5,7 +5,7 @@ from os import environ
 TOKEN = environ.get('BOT_TOKEN')
 
 def start(update, context):
-    update.message.reply_text("hello! swagat hai")
+    update.message.reply_text("Vanakkam Makkaley Naan Shortlinks lam bypass panni tharuven")
     
 def help(update, context):
    update.message.reply_text("""
