@@ -1,13 +1,26 @@
 {
-          "env": {
-          "BOT_TOKEN": {
+    "name": "Bypass_Bot",
+    "description": "ShortLinks bypass bot",
+    "keywords": [
+        "telegram",
+        "Bypass"
+    ],
+    "env": {
+        "BOT_TOKEN": {
             "description": "Your bot token",
             "value": ""
-           },
-          },
-          "buildpacks": [
-                    {
-                              "url": "heroku/python"
-                    }
-          ]
+        },
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
