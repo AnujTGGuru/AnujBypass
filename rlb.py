@@ -34,10 +34,6 @@ def rocklinks_bypass(url):
 
 # -----------------------------------
 
-print(rocklinks_bypass(url))
-
-# -----------------------------------
-
 print(rocklinks_bypass(url) ,file=open("2.txt", "w"))
 print("Confirming Link...")
 print("Successfully Bypassed!")
