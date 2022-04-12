@@ -1,1 +1,1 @@
-{'error': False, 'src_url': 'http://chuxoast.com/1gok', 'bypassed_url': 'http://Facebook.in'}
+{'error': True, 'src_url': 'error', 'bypassed_url': 'error'}
