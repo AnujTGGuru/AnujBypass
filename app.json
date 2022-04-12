@@ -1,15 +1,29 @@
 {
-    "name": "Bypass_Bot",
-    "description": "ShortLinks bypass bot",
+    "name": "GPlink_Bypass_Bot",
+    "description": "GPlink bypass bot",
     "keywords": [
         "telegram",
-        "Bypass"
+        "gplink"
     ],
+    "website": "https://github.com/Mahesh0253/GPlink-bot",
+    "repository": "https://github.com/Mahesh0253/GPlink-bot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
             "value": ""
         },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": "."
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": "."
+        },
+        "API_KEY": {
+            "description": "Dafault Value Dot ( . )",
+            "value": "."
+        }
     },
     "addons": [],
     "buildpacks": [
