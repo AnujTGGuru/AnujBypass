@@ -96,7 +96,7 @@ def lv(update, context):
         os.system('python ex.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
-await def rlb(update, context):
+def rlb(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
         update.message.reply_text(f"processing")
