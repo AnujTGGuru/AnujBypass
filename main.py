@@ -20,6 +20,8 @@ def help(update, context):
 
 /gp -> bypass gplink stinky url
 
+/rlb -> bypass rocklinks url
+
 /lv -> linkvertise link bypass
 
 /sd -> AppDrive or DriveApp links (login required wont work for now)
