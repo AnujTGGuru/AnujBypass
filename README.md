@@ -35,6 +35,7 @@
 ```javascript
 start - Welcome Message
 help - all command list
+gp - gplink and stinkly bypass
 adf - bypass adf.ly link
 droplink -  bypass droplink.co link
 sd - AppDrive or DriveApp links (login required wont work )
