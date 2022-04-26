@@ -11,7 +11,7 @@ print("Checking Link!")
 
 def rocklinks_bypass(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
-    DOMAIN = "https://rocklinks.net"
+    DOMAIN = "https://rocklin.in"
     
     url = url[:-1] if url[-1] == '/' else url
 
