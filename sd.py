@@ -8,8 +8,12 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-email = "OPTIONAL" #@param {type:"string"}
-passwd = "OPTIONAL" #@param {type:"string"}
+APPDRIVE_EMAIL = 
+APPDRIVE_PASS = 
+account = {
+    'email': APPDRIVE_EMAIL,
+    'passwd': APPDRIVE_PASS
+    }
 print("You have Entered:")
 print("Link:")
 print(url)
