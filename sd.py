@@ -8,10 +8,8 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-EMAIL = environ.get('APPDRIVE_MAIL')
-PASS = environ.get('APPDRIVE_PASS')
-email = "EMAIL" 
-passwd = "PASS"
+email = "OPTIONAL" #@param {type:"string"}
+passwd = "OPTIONAL" #@param {type:"string"}
 print("You have Entered:")
 print("Link:")
 print(url)
@@ -20,8 +18,9 @@ print(email)
 print("Password:")
 print(passwd)
 # Destination config ----
-SHARED_DRIVE_ID = environ.get('SHARED_DRIVE_ID') # team drive ID (optional) (for MyDrive, keep this field empty)
-FOLDER_ID = environ.get('FOLDER_ID') # drive folder ID (optional)
+SHARED_DRIVE_ID = '' # team drive ID (optional) (for MyDrive, keep this field empty)
+FOLDER_ID = '' # drive folder ID (optional)
+
 '''
 NOTE: 
  - Auto-detection for non-login urls, and indicated via 'link_type' (direct/login) in output.
@@ -36,7 +35,7 @@ print("Bypassing Link...")
 def account_login(client, url, email, password):
     data = {
         'email': email,
-        'passwd': passwd
+        'password': password
     }
     client.post(f'https://{urlparse(url).netloc}/login', data=data)
 
@@ -71,7 +70,7 @@ def appdrive_dl(url):
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
     })
 
-    account_login(client, url, email, passwd)
+    account_login(client, url, account['email'], account['passwd'])
     update_account(client, url, SHARED_DRIVE_ID, FOLDER_ID)
 
     res = client.get(url)
