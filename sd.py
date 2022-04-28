@@ -8,9 +8,11 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
+email = environ.get('APPDRIVE_EMAIL'),
+passwd = environ.get('APPDRIVE_PASS')
 account = {
-    'email': environ.get('APPDRIVE_EMAIL'),
-    'passwd': environ.get('APPDRIVE_PASS')
+    'email': APPDRIVE_EMAIL,
+    'passwd': APPDRIVE_PASS
     }
 print("You have Entered:")
 print("Link:")
@@ -34,7 +36,7 @@ SUPPORTED DOMAINS:
 print("Bypassing Link...")
 # ===================================================================
 
-def account_login(client, url, email, password):
+def account_login(client, url, email, passwd):
     data = {
         'email': email,
         'password': password
