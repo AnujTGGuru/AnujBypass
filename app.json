@@ -1,9 +1,9 @@
 {
-    "name": "GPlink_Bypass_Bot",
-    "description": "GPlink bypass bot",
+    "name": "Thani Oruvan bypass",
+    "description": "Shortlinks Bypass Bot",
     "keywords": [
         "telegram",
-        "gplink"
+        "bypass"
     ],
     "website": "https://github.com/Mahesh0253/GPlink-bot",
     "repository": "https://github.com/Mahesh0253/GPlink-bot",
@@ -15,17 +15,14 @@
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
             "value": "."
-            "required": false
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
             "value": "."
-            "required": false
         },
         "API_KEY": {
             "description": "Dafault Value Dot ( . )",
             "value": "."
-            "required": false
         },
         "FOLDER_ID": {
             "description": "Copy the link from drive Folder and Paste the Id",
