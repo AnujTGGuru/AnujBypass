@@ -14,34 +14,37 @@
         },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
-            "value": "."
+            "value": ".",
+            "required": false
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
-            "value": "."
+            "value": ".",
+            "required": false
         },
         "API_KEY": {
             "description": "Dafault Value Dot ( . )",
-            "value": "."
+            "value": ".",
+            "required": false
         },
         "FOLDER_ID": {
             "description": "Copy the link from drive Folder and Paste the Id",
-            "value": ""
+            "value": "",
             "required": false
         },
         "SHARED_DRIVE_ID": {
             "description": "Copy the link from Shared Drive / Team Drivw Folder and Paste the Id",
-            "value": ""
+            "value": "",
             "required": false
         },
         "APPDRIVE_MAIL": {
             "description": "Get this value from appdrive.in",
-            "value": ""
+            "value": "",
             "required": false
         },
         "APPDRIVE_PASS": {
             "description": "Set The Passwor and Get the password from Appdrive.in",
-            "value": ""
+            "value": "",
             "required": false
         }
     },
