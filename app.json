@@ -5,27 +5,12 @@
         "telegram",
         "bypass"
     ],
-    "website": "https://github.com/Mahesh0253/GPlink-bot",
-    "repository": "https://github.com/Mahesh0253/GPlink-bot",
+    "website": "https://github.com/thanioruvangkls/BypassBot",
+    "repository": "https://github.com/thanioruvangkls/BypassBot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
             "value": ""
-        },
-        "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
-            "value": ".",
-            "required": false
-        },
-        "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
-            "value": ".",
-            "required": false
-        },
-        "API_KEY": {
-            "description": "Dafault Value Dot ( . )",
-            "value": ".",
-            "required": false
         },
         "FOLDER_ID": {
             "description": "Copy the link from drive Folder and Paste the Id",
