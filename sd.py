@@ -6,10 +6,10 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-APPDRIVE_MAIL = ''
-APPDRIVE_PASS = ''
-email = "APPDRIVE_MAIL" 
-passwd = "APPDRIVE_PASS" 
+EMAIL = environ.get('APPDRIVE_MAIL')
+PASS = environ.get('APPDRIVE_PASS')
+email = "EMAIL" 
+passwd = "PASS"
 print("You have Entered:")
 print("Link:")
 print(url)
@@ -18,9 +18,8 @@ print(email)
 print("Password:")
 print(passwd)
 # Destination config ----
-SHARED_DRIVE_ID = '' # team drive ID (optional) (for MyDrive, keep this field empty)
-FOLDER_ID = '' # drive folder ID (optional)
-
+SHARED_DRIVE_ID = environ.get('SHARED_DRIVE_ID') # team drive ID (optional) (for MyDrive, keep this field empty)
+FOLDER_ID = environ.get('FOLDER_ID') # drive folder ID (optional)
 '''
 NOTE: 
  - Auto-detection for non-login urls, and indicated via 'link_type' (direct/login) in output.
