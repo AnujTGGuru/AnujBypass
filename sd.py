@@ -6,8 +6,8 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-email = "OPTIONAL" 
-passwd = "OPTIONAL" 
+email = "EMAIL" 
+passwd = "PASS" 
 print("You have Entered:")
 print("Link:")
 print(url)
