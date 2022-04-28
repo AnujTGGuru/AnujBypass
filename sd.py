@@ -8,11 +8,11 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-email = environ.get('APPDRIVE_EMAIL'),
+email = environ.get('APPDRIVE_EMAIL')
 passwd = environ.get('APPDRIVE_PASS')
 account = {
-    'email': APPDRIVE_EMAIL,
-    'passwd': APPDRIVE_PASS
+    'email': environ.get('APPDRIVE_EMAIL'),
+    'passwd': environ.get('APPDRIVE_PASS')
     }
 print("You have Entered:")
 print("Link:")
