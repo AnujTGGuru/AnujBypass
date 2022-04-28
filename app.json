@@ -24,6 +24,28 @@
             "description": "Dafault Value Dot ( . )",
             "value": "."
         }
+        "FOLDER_ID": {
+            "description": "Dafault Value Dot ( . )",
+            "value": ""
+        }
+        "SHARED_DRIVE_ID": {
+            "description": "Dafault Value Dot ( . )",
+            "value": ""
+        }
+
+        "APPDRIVE_MAIL": {
+            "description": "Dafault Value Dot ( . )",
+            "value": ""
+        }
+
+        "APPDRIVE_PASS": {
+            "description": "Dafault Value Dot ( . )",
+            "value": ""
+        }
+
+
+
+
     },
     "addons": [],
     "buildpacks": [
