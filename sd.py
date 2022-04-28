@@ -36,7 +36,7 @@ SUPPORTED DOMAINS:
 print("Bypassing Link...")
 # ===================================================================
 
-def account_login(client, url, email, passwd):
+def account_login(client, url, email, password):
     data = {
         'email': email,
         'password': password
