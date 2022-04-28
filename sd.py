@@ -36,7 +36,7 @@ print("Bypassing Link...")
 def account_login(client, url, email, password):
     data = {
         'email': email,
-        'password': passwd
+        'passwd': passwd
     }
     client.post(f'https://{urlparse(url).netloc}/login', data=data)
 
@@ -71,7 +71,7 @@ def appdrive_dl(url):
         "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
     })
 
-    account_login(client, url, email, password)
+    account_login(client, url, email, passwd)
     update_account(client, url, SHARED_DRIVE_ID, FOLDER_ID)
 
     res = client.get(url)
