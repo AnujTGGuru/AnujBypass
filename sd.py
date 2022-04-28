@@ -1,6 +1,8 @@
 
 import re
 import requests
+import os
+from os import environ
 from lxml import etree
 from urllib.parse import urlparse
 
