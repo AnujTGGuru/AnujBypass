@@ -75,56 +75,41 @@ def appdrive_dl(url):
     })
 
     account_login(client, url, account['email'], account['passwd'])
-    update_account(client, url, SHARED_DRIVE_ID, FOLDER_ID)
-
     res = client.get(url)
-    key = re.findall('"key",\s+"(.*?)"', res.text)[0]
-
+    key = re.findall(r'"key",\s+"(.*?)"', res.text)[0]
     ddl_btn = etree.HTML(res.content).xpath("//button[@id='drc']")
-
     info_parsed = parse_info(res.text)
     info_parsed['error'] = False
-    info_parsed['link_type'] = 'login' # direct/login
-    
+    info_parsed['link_type'] = 'login'  # direct/login
     headers = {
         "Content-Type": f"multipart/form-data; boundary={'-'*4}_",
     }
-    
     data = {
         'type': 1,
         'key': key,
         'action': 'original'
     }
-    
     if len(ddl_btn):
         info_parsed['link_type'] = 'direct'
         data['action'] = 'direct'
-    
     while data['type'] <= 3:
         try:
             response = client.post(url, data=gen_payload(data), headers=headers).json()
             break
         except: data['type'] += 1
-        
     if 'url' in response:
         info_parsed['gdrive_link'] = response['url']
     elif 'error' in response and response['error']:
         info_parsed['error'] = True
         info_parsed['error_message'] = response['message']
-    else:
-        info_parsed['error'] = True
-        info_parsed['error_message'] = 'Something went wrong :('
-    
-    if info_parsed['error']: return info_parsed
-    
     if urlparse(url).netloc == 'driveapp.in' and not info_parsed['error']:
         res = client.get(info_parsed['gdrive_link'])
         drive_link = etree.HTML(res.content).xpath("//a[contains(@class,'btn')]/@href")[0]
         info_parsed['gdrive_link'] = drive_link
-        
-    info_parsed['src_url'] = url
-    
-    return info_parsed
+    if not info_parsed['error']:
+        return info_parsed
+    else:
+        raise DirectDownloadLinkException(f"{info_parsed['error_message']}")
 
 # ===================================================================
 
