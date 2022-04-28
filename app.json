@@ -23,29 +23,23 @@
         "API_KEY": {
             "description": "Dafault Value Dot ( . )",
             "value": "."
-        }
+        },
         "FOLDER_ID": {
-            "description": "Dafault Value Dot ( . )",
+            "description": "Copy the link from drive Folder and Paste the Id",
             "value": ""
-        }
+        },
         "SHARED_DRIVE_ID": {
-            "description": "Dafault Value Dot ( . )",
+            "description": "Copy the link from Shared Drive / Team Drivw Folder and Paste the Id",
             "value": ""
-        }
-
+        },
         "APPDRIVE_MAIL": {
-            "description": "Dafault Value Dot ( . )",
+            "description": "Get this value from appdrive.in",
             "value": ""
-        }
-
+        },
         "APPDRIVE_PASS": {
-            "description": "Dafault Value Dot ( . )",
+            "description": "Set The Passwor and Get the password from Appdrive.in",
             "value": ""
         }
-
-
-
-
     },
     "addons": [],
     "buildpacks": [
