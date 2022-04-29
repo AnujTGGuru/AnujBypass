@@ -8,10 +8,10 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-email = environ.get('APPDRIVE_EMAIL')
+email = environ.get('APPDRIVE_MAIL')
 passwd = environ.get('APPDRIVE_PASS')
 account = {
-    'email': environ.get('APPDRIVE_EMAIL'),
+    'email': environ.get('APPDRIVE_MAIL'),
     'passwd': environ.get('APPDRIVE_PASS')
     }
 print("You have Entered:")
