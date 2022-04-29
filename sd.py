@@ -108,8 +108,6 @@ def appdrive_dl(url):
         info_parsed['gdrive_link'] = drive_link
     if not info_parsed['error']:
         return info_parsed
-    else:
-        raise DirectDownloadLinkException(f"{info_parsed['error_message']}")
 
 # ===================================================================
 
