@@ -8,11 +8,11 @@ from urllib.parse import urlparse
 
 
 url = open('1.txt', 'r').read()
-email = environ.get('APPDRIVE_MAIL')
-passwd = environ.get('APPDRIVE_PASS')
+email = environ.get('UNIFIED_MAIL')
+passwd = environ.get('UNIFIED_PASS')
 account = {
-    'email': environ.get('APPDRIVE_MAIL'),
-    'passwd': environ.get('APPDRIVE_PASS')
+    'email': environ.get('UNIFIED_MAIL'),
+    'passwd': environ.get('UNIFIED_PASS')
     }
 print("You have Entered:")
 print("Link:")
@@ -31,7 +31,10 @@ NOTE:
 SUPPORTED DOMAINS:
  - appdrive.in
  - driveapp.in
- 
+ - gdflix.pro
+ - drivebit.in
+ - drivelinks.in
+ - drivesharer.in
 '''
 print("Bypassing Link...")
 # ===================================================================
@@ -106,8 +109,19 @@ def appdrive_dl(url):
         res = client.get(info_parsed['gdrive_link'])
         drive_link = etree.HTML(res.content).xpath("//a[contains(@class,'btn')]/@href")[0]
         info_parsed['gdrive_link'] = drive_link
-    if not info_parsed['error']:
-        return info_parsed
+    if urlparse(url).netloc == 'drivesharer.in' and not info_parsed['error']:
+        res = client.get(info_parsed['gdrive_link'])
+        drive_link = etree.HTML(res.content).xpath("//a[contains(@class,'btn btn-primary')]/@href")[0]
+        info_parsed['gdrive_link'] = drive_link
+    if urlparse(url).netloc == 'drivebit.in' and not info_parsed['error']:
+        res = client.get(info_parsed['gdrive_link'])
+        drive_link = etree.HTML(res.content).xpath("//a[contains(@class,'btn btn-primary')]/@href")[0]
+        info_parsed['gdrive_link'] = drive_link
+
+
+    info_parsed['src_url'] = url
+    
+    return info_parsed['gdrive_link']
 
 # ===================================================================
 
