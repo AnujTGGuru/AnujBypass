@@ -1,12 +1,12 @@
 {
-    "name": "Thani Oruvan bypass",
+    "name": "Bypass Bot",
     "description": "Shortlinks Bypass Bot",
     "keywords": [
         "telegram",
         "bypass"
     ],
-    "website": "https://github.com/thanioruvangkls/BypassBot",
-    "repository": "https://github.com/thanioruvangkls/BypassBot",
+    "website": "https://github.com/majnurangeela/BypassBot",
+    "repository": "https://github.com/majnurangeela/BypassBot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
@@ -19,6 +19,11 @@
         },
         "SHARED_DRIVE_ID": {
             "description": "Copy the link from Shared Drive / Team Drivw Folder and Paste the Id",
+            "value": "",
+            "required": false
+        },
+        "GDTOT_CRYPT": {
+            "description": "Get this value from new.gdtot.re",
             "value": "",
             "required": false
         },
