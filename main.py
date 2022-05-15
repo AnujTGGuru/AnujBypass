@@ -28,6 +28,8 @@ def help(update, context):
 
 /lv -> linkvertise link bypass
 
+/gdtot -> GDTOT links (GDTOT CRYPT REQUIRED)
+
 /sd -> AppDrive or DriveApp links (login required wont work for now)
 
 /ex -> use this command for these services
@@ -85,6 +87,14 @@ def droplink(update, context):
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
 
+def gdtot(update, context):
+        zipk = context.args[0]
+        open('1.txt','w').write(zipk)
+        update.message.reply_text(f"processing")
+        os.system('python gdtot.py')
+        zkm = open('2.txt', 'r').read()
+        update.message.reply_text(f"{zkm}")
+        
 def sd(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
@@ -100,6 +110,7 @@ def lv(update, context):
         os.system('python ex.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
+        
 def rlb(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
@@ -115,6 +126,7 @@ disp.add_handler(telegram.ext.CommandHandler("start", start))
 disp.add_handler(telegram.ext.CommandHandler("help", help))
 disp.add_handler(telegram.ext.CommandHandler("adf", adf))
 disp.add_handler(telegram.ext.CommandHandler("droplink", droplink))
+disp.add_handler(telegram.ext.CommandHandler("gdtot", gdtot))
 disp.add_handler(telegram.ext.CommandHandler("sd", sd))
 disp.add_handler(telegram.ext.CommandHandler("lv", lv))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
