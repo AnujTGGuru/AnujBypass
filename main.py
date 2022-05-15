@@ -30,7 +30,7 @@ def help(update, context):
 
 /magic -> AppDrive/DriveApp/GDFlix/DriveSharer/DriveLinks/DriveBit Links (Login required)
 
-/ex -> use this command for these services
+/generic -> use this command for these services
 
 exe.io/exey.io
 sub2unlock.net/sub2unlock.com
@@ -56,16 +56,16 @@ def adf(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
         update.message.reply_text(f"⚡️⚡️ ADFLY LINK BYPASSING ⚡️⚡️")
-        os.system('python bypas.py')
+        os.system('python adf.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"Done")
         update.message.reply_text(f"{zkm}")
         
-def ex(update, context):
+def generic(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
         update.message.reply_text(f"⚡️⚡️ GENERIC LINK BYPASSING (UNSTABLE FAILS FREQUENTLY) ⚡️⚡️")
-        os.system('python ex.py')
+        os.system('python generic.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
 
@@ -121,7 +121,7 @@ disp.add_handler(telegram.ext.CommandHandler("droplink", droplink))
 disp.add_handler(telegram.ext.CommandHandler("gdtot", gdtot))
 disp.add_handler(telegram.ext.CommandHandler("magic", magic))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
-disp.add_handler(telegram.ext.CommandHandler("ex", ex))
+disp.add_handler(telegram.ext.CommandHandler("generick", generic))
 disp.add_handler(telegram.ext.CommandHandler("rocklinks", rocklinks))
 updater.start_polling()
 updater.idle()
