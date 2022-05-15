@@ -9,7 +9,7 @@ crypt = environ.get('GDTOT_CRYPT')
 
 print("You have Entered:")
 print("URL:")
-print(URL)
+print(url)
 print("Crypt:")
 print(crypt)
 
@@ -68,7 +68,7 @@ def gdtot_dl(url):
     
 # ==========================================
 
-info = gdtot_dl(URL)
+info = gdtot_dl(url)
 
 print("❤️✨GOOGLE DRIVE LINK: "+ info + " ❤️✨" ,file=open("2.txt", "w"))
 print("Bypassed Successfully!")
