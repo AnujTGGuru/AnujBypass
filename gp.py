@@ -44,6 +44,7 @@ def gplinks_bypass(url: str):
     return res.json()['url'].replace('\/','/')
 # ==============================================
 
-print(gplinks_bypass(url) ,file=open("2.txt", "w"))
+inf = gplinks_bypass(url)
+print(print("❤️✨BYPASSED GPLINKS LINK: "+ inf + " ❤️✨" ,file=open("2.txt", "w"))
 print("Confirming Link...")
 print("Successfully Bypassed!")
