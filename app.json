@@ -27,13 +27,13 @@
             "value": "",
             "required": false
         },
-        "APPDRIVE_MAIL": {
-            "description": "Get this value from appdrive.in",
+        "UNIFIED_MAIL": {
+            "description": "Set same login mail for Appdrive, Driveapp, GDFlix, DriveLinks, DriveBit, DriveSharer",
             "value": "",
             "required": false
         },
-        "APPDRIVE_PASS": {
-            "description": "Set The Passwor and Get the password from Appdrive.in",
+        "UNIFIED_PASS": {
+            "description": "Set same login mail for Appdrive, Driveapp, GDFlix, DriveLinks, DriveBit, DriveSharer",
             "value": "",
             "required": false
         }
