@@ -1,4 +1,3 @@
-
 import re
 import requests
 from base64 import b64decode
@@ -66,4 +65,4 @@ def adfly_bypass(url):
 # ==========================================
 
 out = adfly_bypass(URL)
-print(out ,file=open("2.txt", "w"))
+print("❤️✨BYPASSED ADFLY LINK: "+ out + " ❤️✨" ,file=open("2.txt", "w"))
