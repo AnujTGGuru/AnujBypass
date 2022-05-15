@@ -28,6 +28,14 @@ def help(update, context):
 
 /gdtot -> GDTOT links (GDTOT CRYPT REQUIRED)
 
+/hubdrive -> HubDrive Links (HUBDRIVE CRYPT REQUIRED)
+
+/katdrive -> KatDrive Links (KATDRIVE CRYPT REQUIRED)
+
+/kolop -> Kolop Links (KOLOP CRYPT REQUIRED)
+
+/drivefire -> DriveFire Links (DRIVEFIRE CRYPT REQUIRED)
+
 /magic -> AppDrive/DriveApp/GDFlix/DriveSharer/DriveLinks/DriveBit Links (Login required)
 
 /generic -> use this command for these services
@@ -94,6 +102,38 @@ def gdtot(update, context):
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
         
+def hubdrive(update, context):
+        zipk = context.args[0]
+        open('1.txt','w').write(zipk)
+        update.message.reply_text(f"⚡️⚡️ HUBDRIVE LINK BYPASSING ⚡️⚡️")
+        os.system('python hubdrive.py')
+        zkm = open('2.txt', 'r').read()
+        update.message.reply_text(f"{zkm}")
+
+def katdrive(update, context):
+        zipk = context.args[0]
+        open('1.txt','w').write(zipk)
+        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        os.system('python katdrive.py')
+        zkm = open('2.txt', 'r').read()
+        update.message.reply_text(f"{zkm}")
+
+def kolop(update, context):
+        zipk = context.args[0]
+        open('1.txt','w').write(zipk)
+        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        os.system('python kolop.py')
+        zkm = open('2.txt', 'r').read()
+        update.message.reply_text(f"{zkm}")
+        
+def drivefire(update, context):
+        zipk = context.args[0]
+        open('1.txt','w').write(zipk)
+        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        os.system('python drivefire.py')
+        zkm = open('2.txt', 'r').read()
+        update.message.reply_text(f"{zkm}")
+        
 def magic(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
@@ -119,6 +159,10 @@ disp.add_handler(telegram.ext.CommandHandler("help", help))
 disp.add_handler(telegram.ext.CommandHandler("adf", adf))
 disp.add_handler(telegram.ext.CommandHandler("droplink", droplink))
 disp.add_handler(telegram.ext.CommandHandler("gdtot", gdtot))
+disp.add_handler(telegram.ext.CommandHandler("hubdrive", hubdrive))
+disp.add_handler(telegram.ext.CommandHandler("katdrive", katdrive))
+disp.add_handler(telegram.ext.CommandHandler("kolop", kolop))
+disp.add_handler(telegram.ext.CommandHandler("drivefire", drivefire))
 disp.add_handler(telegram.ext.CommandHandler("magic", magic))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
 disp.add_handler(telegram.ext.CommandHandler("generick", generic))
