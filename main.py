@@ -24,16 +24,14 @@ def help(update, context):
 
 /gp -> bypass gplink stinky url
 
-/rlb -> bypass rocklinks url
-
-/lv -> linkvertise link bypass
+/rocklinks -> bypass rocklinks url
 
 /gdtot -> GDTOT links (GDTOT CRYPT REQUIRED)
 
 /magic -> AppDrive/DriveApp/GDFlix/DriveSharer/DriveLinks/DriveBit Links (Login required)
 
 /ex -> use this command for these services
-linkvertise.com
+
 exe.io/exey.io
 sub2unlock.net/sub2unlock.com
 rekonise.com
@@ -57,15 +55,16 @@ usage - commands{} link{https://...} (example -->/adf https://adf.ly/xyz)
 def adf(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
+        update.message.reply_text(f"⚡️⚡️ ADFLY LINK BYPASSING ⚡️⚡️")
         os.system('python bypas.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"Done")
         update.message.reply_text(f"{zkm}")
+        
 def ex(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
+        update.message.reply_text(f"⚡️⚡️ GENERIC LINK BYPASSING (UNSTABLE FAILS FREQUENTLY) ⚡️⚡️")
         os.system('python ex.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -73,7 +72,7 @@ def ex(update, context):
 def gp(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
+        update.message.reply_text(f"⚡️⚡️ GPLINKS LINK BYPASSING ⚡️⚡️")
         os.system('python gp.py')
         update.message.reply_text(f"Done")
         zkm = open('2.txt', 'r').read()
@@ -82,7 +81,7 @@ def gp(update, context):
 def droplink(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
+        update.message.reply_text(f"⚡️⚡️ DROPLINK LINK BYPASSING ⚡️⚡️")
         os.system('python droplink.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -90,7 +89,7 @@ def droplink(update, context):
 def gdtot(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
+        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
         os.system('python gdtot.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -98,24 +97,17 @@ def gdtot(update, context):
 def magic(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
+        update.message.reply_text(f"⚡️⚡️ UNIFIED LINK BYPASSING ⚡️⚡️")
         os.system('python magic.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
 
-def lv(update, context):
-        zipk = context.args[0]
-        open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
-        os.system('python ex.py')
-        zkm = open('2.txt', 'r').read()
-        update.message.reply_text(f"{zkm}")
         
-def rlb(update, context):
+def rocklinks(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"processing")
-        os.system('python rlb.py')
+        update.message.reply_text(f"⚡️⚡️ ROCKLINKS LINK BYPASSING ⚡️⚡️")
+        os.system('python rocklinks.py')
         update.message.reply_text(f"Done")
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -128,9 +120,8 @@ disp.add_handler(telegram.ext.CommandHandler("adf", adf))
 disp.add_handler(telegram.ext.CommandHandler("droplink", droplink))
 disp.add_handler(telegram.ext.CommandHandler("gdtot", gdtot))
 disp.add_handler(telegram.ext.CommandHandler("magic", magic))
-disp.add_handler(telegram.ext.CommandHandler("lv", lv))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
 disp.add_handler(telegram.ext.CommandHandler("ex", ex))
-disp.add_handler(telegram.ext.CommandHandler("rlb", rlb))
+disp.add_handler(telegram.ext.CommandHandler("rocklinks", rocklinks))
 updater.start_polling()
 updater.idle()
