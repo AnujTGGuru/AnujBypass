@@ -126,4 +126,4 @@ def appdrive_dl(url):
 # ===================================================================
 
 inf = appdrive_dl(url)
-print("Google Drive Link: "+ inf) ,file=open("2.txt", "w"))
+print("Google Drive Link: "+ inf ,file=open("2.txt", "w"))
