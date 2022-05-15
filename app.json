@@ -27,6 +27,26 @@
             "value": "",
             "required": false
         },
+        "HUBDRIVE_CRYPT": {
+            "description": "Get this value from Hubdrive.cc",
+            "value": "",
+            "required": false
+        },
+        "KATDRIVE_CRYPT": {
+            "description": "Get this value from KATDRIVE.NET",
+            "value": "",
+            "required": false
+        },
+        "KOLOP_CRYPT": {
+            "description": "Get this value from KOLOP.ICU",
+            "value": "",
+            "required": false
+        },
+        "DRIVEFIRE_CRYPT": {
+            "description": "Get this value from DRIVEFIRE.IN",
+            "value": "",
+            "required": false
+        },
         "UNIFIED_MAIL": {
             "description": "Set same login mail for Appdrive, Driveapp, GDFlix, DriveLinks, DriveBit, DriveSharer",
             "value": "",
