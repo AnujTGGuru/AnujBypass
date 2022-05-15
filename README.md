@@ -6,6 +6,7 @@
 - TheCaduceus - bypass bots repo supplier
 - yuuki - gplink and droplink bypass bot creator
 - thanioruvan
+- majnurangeela - some tweaks and integration of some features
 
 ## Supported Links
 - adf.ly link
@@ -38,7 +39,8 @@ help - all command list
 gp - gplink and stinkly bypass
 adf - bypass adf.ly link
 droplink -  bypass droplink.co link
-sd - AppDrive or DriveApp links (login required wont work )
+gdtot - Bypass GDTOT
+magic - AppDrive/DriveApp/GDFlix/DriveSharer/DriveBit/DriveLinks Links (Login required)
 lv -  linkvertise link bypass
 ex - other supported link bypass
 rlb - bypass rocklinks url
