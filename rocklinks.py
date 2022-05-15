@@ -11,7 +11,14 @@ print("Checking Link!")
 
 def rocklinks_bypass(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
-    DOMAIN = "https://links.spidermods.in"
+    
+    if 'spidermods.in' in url:
+      DOMAIN = "https://links.spidermods.in/"
+    elif 'rocklink.in' in url:
+      DOMAIN = "https://rocklink.in/"
+    else:
+      return print("Invalid Link")
+
     url = url[:-1] if url[-1] == '/' else url
 
     code = url.split("/")[-1]
@@ -35,5 +42,5 @@ def rocklinks_bypass(url):
     except: return "Something went wrong :("
 
 # -----------------------------------
-
-print(rocklinks_bypass(url) ,file=open("2.txt", "w"))
+inf = rocklinks_bypass(url)
+print("❤️✨BYPASSED ROCKLINKS LINK: "+ inf + " ❤️✨" ,file=open("2.txt", "w"))
