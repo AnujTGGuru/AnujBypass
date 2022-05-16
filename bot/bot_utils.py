@@ -8,9 +8,9 @@ from requests import head as rhead
 from urllib.request import urlopen
 from telegram import InlineKeyboardMarkup
 
-from bot.helper.telegram_helper.bot_commands import BotCommands
+from bot.bot_commands import BotCommands
 from bot import download_dict, download_dict_lock, STATUS_LIMIT, botStartTime, DOWNLOAD_DIR
-from bot.helper.telegram_helper.button_build import ButtonMaker
+from bot.button_build import ButtonMaker
 
 MAGNET_REGEX = r"magnet:\?xt=urn:btih:[a-zA-Z0-9]*"
 
@@ -138,46 +138,13 @@ def get_readable_message():
                 else:
                     msg += f"\n<b>Downloaded:</b> {get_readable_file_size(download.processed_bytes())}\n<b>Total Size:</b>{download.size()}"
                 msg += f"\n<b>Speed:</b> {download.speed()}\n<b>ETA:</b> {download.eta()}"
-                try:
-                    msg += f"\n<b>🌱 Seeders:</b> {download.aria_download().num_seeders}" \
-                           f"\n<b>📶 Peers:</b> {download.aria_download().connections}\n<b>⚙️ Engine:</b> Aria"
-                except:
-                    pass
-                try:
-                    msg += f"\n<b>🌱 Seeders:</b> {download.torrent_info().num_seeds}" \
-                           f"\n<b>🌍 Leechers:</b> {download.torrent_info().num_leechs}\n<b>⚙️ Engine:</b> Qbit"
-                except:
-                    pass
                 msg += f"\n<b>👥 User:</b> {download.message.from_user.first_name}(<code>{download.message.from_user.id}</code>)\n<b>⚠️ Warn:</b> <code>/warn {download.message.from_user.id}</code>\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>\n___________________________"
-            elif download.status() == MirrorStatus.STATUS_SEEDING:
-                msg += f"\n<b>Size: </b>{download.size()}"
-                msg += f"\n<b>Speed: </b>{get_readable_file_size(download.torrent_info().upspeed)}/s"
-                msg += f" | <b>Uploaded: </b>{get_readable_file_size(download.torrent_info().uploaded)}"
-                msg += f"\n<b>Ratio: </b>{round(download.torrent_info().ratio, 3)}"
-                msg += f" | <b>Time: </b>{get_readable_time(download.torrent_info().seeding_time)}"
-                msg += f"\n<b>👥 User:</b> {download.message.from_user.first_name}(<code>{download.message.from_user.id}</code>)\n<b>⚠️ Warn:</b> <code>/warn {download.message.from_user.id}</code>\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>\n___________________________"
-            else:
                 msg += f"\n<b>Size: </b>{download.size()}"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
         bmsg = f"<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
         bmsg += f"\n<b>RAM:</b> {virtual_memory().percent}% | <b>UPTIME:</b> {get_readable_time(time() - botStartTime)}"
-        dlspeed_bytes = 0
-        upspeed_bytes = 0
-        for download in list(download_dict.values()):
-            spd = download.speed()
-            if download.status() == MirrorStatus.STATUS_DOWNLOADING:
-                if 'K' in spd:
-                    dlspeed_bytes += float(spd.split('K')[0]) * 1024
-                elif 'M' in spd:
-                    dlspeed_bytes += float(spd.split('M')[0]) * 1048576
-            elif download.status() == MirrorStatus.STATUS_UPLOADING:
-                if 'KB/s' in spd:
-                    upspeed_bytes += float(spd.split('K')[0]) * 1024
-                elif 'MB/s' in spd:
-                    upspeed_bytes += float(spd.split('M')[0]) * 1048576
-        bmsg += f"\n<b>DL:</b> {get_readable_file_size(dlspeed_bytes)}/s | <b>UL:</b> {get_readable_file_size(upspeed_bytes)}/s"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"<b>Page:</b> {PAGE_NO}/{pages} | <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
