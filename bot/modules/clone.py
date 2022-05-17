@@ -16,6 +16,79 @@ from bot.helper.ext_utils.bot_utils import get_readable_file_size, is_gdrive_lin
 from bot.helper.clone_utils.download_utils.direct_link_generator import gdtot, appdrive, driveapp, gdflix, drivebit, drivelinks, drivesharer, hubdrive, katdrive, kolop, drivefire
 from bot.helper.ext_utils.exceptions import DirectDownloadLinkException
 
+SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
+
+def new_thread(fn):
+    """To use as decorator to make a function call threaded.
+    Needs import
+    from threading import Thread"""
+
+    def wrapper(*args, **kwargs):
+        thread = Thread(target=fn, args=args, kwargs=kwargs)
+        thread.start()
+        return thread
+
+    return wrapper
+
+def get_readable_file_size(size_in_bytes) -> str:
+    if size_in_bytes is None:
+        return '0B'
+    index = 0
+    while size_in_bytes >= 1024:
+        size_in_bytes /= 1024
+        index += 1
+    try:
+        return f'{round(size_in_bytes, 2)}{SIZE_UNITS[index]}'
+    except IndexError:
+        return 'File too large'
+
+def is_gdrive_link(url: str):
+    return "drive.google.com" in url
+
+def is_gdtot_link(url: str):
+    url = match(r'https?://.+\.gdtot\.\S+', url)
+    return bool(url)
+
+def is_appdrive_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:appdrive)\.\S+', url)
+    return bool(url)
+
+def is_driveapp_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:driveapp)\.\S+', url)
+    return bool(url)
+
+def is_gdflix_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:gdflix)\.\S+', url)
+    return bool(url)
+
+def is_driveliks_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:drivelinks)\.\S+', url)
+    return bool(url)
+
+def is_drivebit_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:drivebit)\.\S+', url)
+    return bool(url)
+
+def is_drivesharer_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:drivesharer)\.\S+', url)
+    return bool(url)
+
+def is_hubdrive_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:hubdrive)\.\S+', url)
+    return bool(url)
+
+def is_katdrive_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:katdrive)\.\S+', url)
+    return bool(url)
+
+def is_kolop_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:kolop)\.\S+', url)
+    return bool(url)
+
+def is_drivefire_link(url: str):
+    url = match(r'https?://(?:\S*\.)?(?:drivefire)\.\S+', url)
+    return bool(url)
+    
 @new_thread
 def cloneNode(update, context, multi=0):
     if AUTO_DELETE_UPLOAD_MESSAGE_DURATION != -1:
