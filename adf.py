@@ -65,4 +65,6 @@ def adfly_bypass(url):
 # ==========================================
 
 inf = adfly_bypass(url)
-print("❤️✨BYPASSED ADFLY LINK: "+ inf + " ❤️✨" ,file=open("2.txt", "w"))
+fstr = "❤️✨BYPASSED ADFLY LINK: "
+lstr = " ❤️✨"
+print(fstr+ inf + lstr ,file=open("2.txt", "w"))
