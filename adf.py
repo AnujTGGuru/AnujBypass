@@ -14,7 +14,7 @@ print("Checking Link...")
 print("Bypassing Link...")
 # ==========================================
 
-def decrypt_url(code):
+def decrypt_url(code: str):
     a, b = '', ''
     for i in range(0, len(code)):
         if i % 2 == 0: a += code[i]
