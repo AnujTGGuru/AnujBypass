@@ -4,9 +4,9 @@ from base64 import b64decode
 from urllib.parse import unquote
 
 # ==========================================
-URL = open('1.txt', 'r').read()
+url = open('1.txt', 'r').read()
 print("You Have Entered:")
-print(URL)
+print(url)
 print("Checking Link...")
 '''
 404: Complete exception handling not found :(
