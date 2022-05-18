@@ -47,7 +47,9 @@ def drivefire_dl(url: str):
         res = client.post(req_url, headers=headers, data=data).json()['file']
     except: return {'error': True, 'src_url': url}
     
-    return res
+    decoded_id = res.rsplit('/', 1)[-1]
+    info_parsed = f"https://drive.google.com/file/d/{decoded_id}"
+    return info_parsed
     
 # ==========================================
 
