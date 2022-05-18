@@ -14,7 +14,7 @@ print("Checking Link...")
 print("Bypassing Link...")
 # ==========================================
 
-def decrypt_url(code: str):
+def decrypt_url(code):
     a, b = '', ''
     for i in range(0, len(code)):
         if i % 2 == 0: a += code[i]
@@ -60,7 +60,7 @@ def adfly_bypass(url: str):
     
     out['bypassed_url'] = url
    
-    return out
+    return out['bypassed_url']
 
 # ==========================================
 
