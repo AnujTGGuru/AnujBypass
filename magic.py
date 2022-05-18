@@ -105,6 +105,8 @@ def appdrive_dl(url):
     elif 'error' in response and response['error']:
         info_parsed['error'] = True
         info_parsed['error_message'] = response['message']
+    if urlparse(url).netloc == 'appdrive.in' and not info_parsed['error']:
+        return info_parsed['gdrive_link']
     if urlparse(url).netloc == 'driveapp.in' and not info_parsed['error']:
         res = client.get(info_parsed['gdrive_link'])
         drive_link = etree.HTML(res.content).xpath("//a[contains(@class,'btn')]/@href")[0]
