@@ -24,7 +24,7 @@ def parse_info(res):
         info_parsed[info_chunks[i]] = info_chunks[i+1]
     return info_parsed
 
-def drivefire_dl(url):
+def drivefire_dl(url: str):
     client = requests.Session()
     client.cookies.update({'crypt': crypt})
     
