@@ -40,7 +40,7 @@ def decrypt_url(code):
 
 # ==========================================
 
-def adfly_bypass(url):
+def adfly_bypass(url: str):
     res = requests.get(url).text
     
     out = {'error': False, 'src_url': url}
@@ -65,6 +65,4 @@ def adfly_bypass(url):
 # ==========================================
 
 inf = adfly_bypass(url)
-fstr = "❤️✨BYPASSED ADFLY LINK: "
-lstr = " ❤️✨"
-print(fstr+ inf + lstr ,file=open("2.txt", "w"))
+print("❤️✨BYPASSED ADF.LY LINK: "+ inf + " ❤️✨" ,file=open("2.txt", "w"))
