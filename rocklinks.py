@@ -9,13 +9,15 @@ print("Checking Link!")
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-def rocklinks_bypass(url):
+def rocklinks_bypass(url: str):
     client = cloudscraper.create_scraper(allow_brotli=False)
     
     if 'spidermods.in' in url:
       DOMAIN = "https://links.spidermods.in/"
     elif 'rocklink.in' in url:
       DOMAIN = "https://rocklink.in/"
+    elif 'rocklinks.net' in url:
+      DOMAIN = "https://links.spidermods.in/"
     else:
       return print("Invalid Link")
 
