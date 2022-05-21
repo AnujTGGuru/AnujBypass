@@ -9,7 +9,7 @@ from urllib.parse import urlparse, parse_qs
 TOKEN = environ.get('BOT_TOKEN')
 
 def start(update, context):
-    update.message.reply_text("Hello folks! I will bypass the shortlinks and Generate Direct GDrive Link")
+    update.message.reply_text("Hello Friends! I will bypass the shortlinks and Generate Direct GDrive Link")
     
 def help(update, context):
    update.message.reply_text("""
