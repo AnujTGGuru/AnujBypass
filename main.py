@@ -80,7 +80,7 @@ def generic(update, context):
 def gp(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ GPLINKS LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗽𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python gp.py')
         update.message.reply_text(f"Done")
         zkm = open('2.txt', 'r').read()
@@ -89,7 +89,7 @@ def gp(update, context):
 def droplink(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ DROPLINK LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗗𝗿𝗼𝗽𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python droplink.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -97,7 +97,7 @@ def droplink(update, context):
 def gdtot(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗱𝘁𝗼𝘁𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python gdtot.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -113,7 +113,7 @@ def hubdrive(update, context):
 def katdrive(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗱𝘁𝗼𝘁𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python katdrive.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -121,7 +121,7 @@ def katdrive(update, context):
 def kolop(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗱𝘁𝗼𝘁𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python kolop.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -129,7 +129,7 @@ def kolop(update, context):
 def drivefire(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ GDTOT LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗱𝘁𝗼𝘁𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python drivefire.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -137,7 +137,7 @@ def drivefire(update, context):
 def magic(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ UNIFIED LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗨𝗻𝗶𝗳𝗶𝗲𝗱 𝗟𝗶𝗻𝗸")
         os.system('python magic.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -146,7 +146,7 @@ def magic(update, context):
 def rocklinks(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ ROCKLINKS LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗥𝗼𝗰𝗸𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
         os.system('python rocklinks.py')
         update.message.reply_text(f"Done")
         zkm = open('2.txt', 'r').read()
