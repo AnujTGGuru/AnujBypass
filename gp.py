@@ -45,6 +45,6 @@ def gplinks_bypass(url: str):
 # ==============================================
 
 inf = gplinks_bypass(url)
-print("❤️✨BYPASSED GPLINKS LINK: "+ inf + " ❤️✨" ,file=open("2.txt", "w"))
+print("❤️✨𝗕𝘆𝗽𝗮𝘀𝘀𝗲𝗱 𝗚𝗽𝗟𝗶𝗻𝗸: "+ inf + " ❤️✨" ,file=open("2.txt", "w"))
 print("Confirming Link...")
 print("Successfully Bypassed!")
