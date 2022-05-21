@@ -58,5 +58,5 @@ def kolop_dl(url):
 
 info = kolop_dl(url)
 
-print("❤️✨GOOGLE DRIVE LINK: "+ info + " ❤️✨" ,file=open("2.txt", "w"))
+print("❤️✨𝗚𝗼𝗼𝗴𝗹𝗲 𝗗𝗿𝗶𝘃𝗲 𝗟𝗶𝗻𝗸: "+ info + " ❤️✨" ,file=open("2.txt", "w"))
 print("Bypassed Successfully!")
