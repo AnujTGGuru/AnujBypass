@@ -9,7 +9,7 @@ from urllib.parse import urlparse, parse_qs
 TOKEN = environ.get('BOT_TOKEN')
 
 def start(update, context):
-    update.message.reply_text("Hello Friends! I Workes Only Kristy's Mirror Group")
+    update.message.reply_text("Not Authorized User")
     
 def help(update, context):
    update.message.reply_text("""
@@ -80,16 +80,16 @@ def generic(update, context):
 def gp(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗽𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
+        update.message.reply_text(f"<b>Bypassing Your Gplink Link</b>")
         os.system('python gp.py')
-        update.message.reply_text(f"Done")
+        update.message.reply_text(f"<i>Succesfully Bypassed Your Link</i>")
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
 
 def droplink(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗗𝗿𝗼𝗽𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
+        update.message.reply_text(f"<b>Bypassing Your Droplink URL</b>")
         os.system('python droplink.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -97,7 +97,7 @@ def droplink(update, context):
 def gdtot(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗚𝗱𝘁𝗼𝘁𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
+        update.message.reply_text(f"<b>Bypassing Your GDTOT Link</b>")
         os.system('python gdtot.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -105,7 +105,7 @@ def gdtot(update, context):
 def hubdrive(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"⚡️⚡️ HUBDRIVE LINK BYPASSING ⚡️⚡️")
+        update.message.reply_text(f"<b>Bypassing Your HubDrive Link</b>")
         os.system('python hubdrive.py')
         zkm = open('2.txt', 'r').read()
         update.message.reply_text(f"{zkm}")
@@ -146,7 +146,7 @@ def magic(update, context):
 def rocklinks(update, context):
         zipk = context.args[0]
         open('1.txt','w').write(zipk)
-        update.message.reply_text(f"𝗕𝘆𝗽𝗮𝘀𝘀𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗥𝗼𝗰𝗸𝗹𝗶𝗻𝗸 𝗟𝗶𝗻𝗸")
+        update.message.reply_text(f"<b> Bypassing Your Rocklinms Link</b>")
         os.system('python rocklinks.py')
         update.message.reply_text(f"Done")
         zkm = open('2.txt', 'r').read()
@@ -154,7 +154,7 @@ def rocklinks(update, context):
 
 updater = telegram.ext.Updater(TOKEN, use_context=True)
 disp = updater.dispatcher
-disp.add_handler(telegram.ext.CommandHandler("start", start))
+disp.add_handler(telegram.ext.CommandHandler("startbot", start))
 disp.add_handler(telegram.ext.CommandHandler("help", help))
 disp.add_handler(telegram.ext.CommandHandler("adf", adf))
 disp.add_handler(telegram.ext.CommandHandler("droplink", droplink))
@@ -163,7 +163,7 @@ disp.add_handler(telegram.ext.CommandHandler("hubdrive", hubdrive))
 disp.add_handler(telegram.ext.CommandHandler("katdrive", katdrive))
 disp.add_handler(telegram.ext.CommandHandler("kolop", kolop))
 disp.add_handler(telegram.ext.CommandHandler("drivefire", drivefire))
-disp.add_handler(telegram.ext.CommandHandler("magic", magic))
+disp.add_handler(telegram.ext.CommandHandler("appdrive", magic))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
 disp.add_handler(telegram.ext.CommandHandler("generick", generic))
 disp.add_handler(telegram.ext.CommandHandler("rocklinks", rocklinks))
