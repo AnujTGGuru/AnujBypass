@@ -154,7 +154,7 @@ def rocklinks(update, context):
 
 updater = telegram.ext.Updater(TOKEN, use_context=True)
 disp = updater.dispatcher
-disp.add_handler(telegram.ext.CommandHandler("startbot", start))
+disp.add_handler(telegram.ext.CommandHandler("start", start))
 disp.add_handler(telegram.ext.CommandHandler("help", help))
 disp.add_handler(telegram.ext.CommandHandler("adf", adf))
 disp.add_handler(telegram.ext.CommandHandler("droplink", droplink))
@@ -165,7 +165,7 @@ disp.add_handler(telegram.ext.CommandHandler("kolop", kolop))
 disp.add_handler(telegram.ext.CommandHandler("drivefire", drivefire))
 disp.add_handler(telegram.ext.CommandHandler("appdrive", magic))
 disp.add_handler(telegram.ext.CommandHandler("gp", gp))
-disp.add_handler(telegram.ext.CommandHandler("generick", generic))
+disp.add_handler(telegram.ext.CommandHandler("generic", generic))
 disp.add_handler(telegram.ext.CommandHandler("rocklinks", rocklinks))
 disp.add_handler(telegram.ext.CommandHandler("magic", magic))
 updater.start_polling()
