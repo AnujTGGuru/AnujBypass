@@ -5,8 +5,8 @@
         "telegram",
         "bypass"
     ],
-    "website": "https://github.com/majnurangeela/BypassBot",
-    "repository": "https://github.com/majnurangeela/BypassBot",
+    "website": "https://github.com/chammii1978/bypasss",
+    "repository": "https://github.com/chammii1978/bypasss",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
